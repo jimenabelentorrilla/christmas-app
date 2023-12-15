@@ -2,7 +2,11 @@ import React from 'react';
 
 const Gift = () => {
   return (
-    <div>Gift</div>
+    <>
+      <div className='cnt-gift'>
+        <p>REGALO</p>
+      </div>
+    </>
   )
 }
 

@@ -2,6 +2,7 @@ import './App.css';
 import Logo from "./assets/Logo.png";
 import Santa from "./assets/Group 1.png";
 import Gift from "./components/Gift";
+import Input from './components/Input';
 
 function App() {
   return (
@@ -14,7 +15,13 @@ function App() {
             <div className='section-left'>
               <div className='bg-card'>
                 <h1>¡Lista de regalos!</h1>
-                <Gift />
+                <Input />
+                <div className='cnt-list-gifts'>
+                  <Gift />
+                  <Gift />
+                  <Gift />
+                </div>
+                
                
               </div>
             </div>

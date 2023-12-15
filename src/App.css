@@ -56,3 +56,46 @@
 .santa-img img{
   width: 80%;
 }
+/*****/
+.cnt-input{
+  background-color: rgb(226, 225, 225);
+  padding: 8px 15px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cnt-input input{
+  width: 80%;
+  border: none;
+  padding: 10px 2px;
+  border-radius: 15px;
+  background-color: rgb(226, 225, 225);
+  color: #3f3f3f;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+}
+.cnt-input button{
+  background-color: #108D49;
+  color: #ffffff;
+  font-size: 32px;
+  width: 42px;
+  border: none;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+/***/
+
+.cnt-list-gifts{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  padding: 1rem;
+}
+.cnt-gift{
+  padding: 1.5rem;
+  background-color: #FFEADD;
+  border-radius: 25px;
+}
