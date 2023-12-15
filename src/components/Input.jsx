@@ -1,10 +1,13 @@
-import React from 'react';
+import { useState } from 'react';
 
 const Input = () => {
+    
   return (
     <>
         <div className='cnt-input'>
-          <input type='text' />
+          <input 
+            type='text'
+          />
           <button>+</button>
         </div>
     </>

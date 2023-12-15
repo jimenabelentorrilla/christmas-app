@@ -98,4 +98,7 @@
   padding: 1.5rem;
   background-color: #FFEADD;
   border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

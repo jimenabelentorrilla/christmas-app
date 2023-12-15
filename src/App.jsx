@@ -9,7 +9,7 @@ function App() {
     <>
       <div className='contenedor'>
           <div className='nav'>
-                <img src={Logo}/>
+            <img src={Logo}/>
           </div>
           <div className='main'>
             <div className='section-left'>
@@ -20,9 +20,8 @@ function App() {
                   <Gift />
                   <Gift />
                   <Gift />
+                  <Gift />
                 </div>
-                
-               
               </div>
             </div>
             <div className='section-right'>
