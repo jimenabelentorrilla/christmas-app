@@ -1,38 +1,48 @@
 import './App.css';
-import Logo from "./assets/Logo.png";
-import Santa from "./assets/Group 1.png";
-import Gift from "./components/Gift";
+import { useState } from 'react';
 import Input from './components/Input';
+import { GiftGrid } from './components/GiftGrid';
 
 function App() {
+  const [ regalos , setRegalos ] = useState ([]); /* En el componente de Input, le estoy pasando como una propiedad la funcion setRegalos para que lo reciba y puedan comunicarse entre componentes*/ 
+
+  const onAddCategory = ( newCategory ) => {
+
+      if ( regalos.includes(newCategory) ) return; /*Validar que sean únicos los nombres de array */ 
+
+		  setRegalos([ newCategory, ...regalos]); /* Cada vez que hago click en el boton "+"" agrego un regalo, el operador spread hace que se mantenga la lista en el estado y no devuelva un array vacio. */
+	}
+
+  const onDelete = () => {
+    
+  }
+
   return (
     <>
       <div className='contenedor'>
-          <div className='nav'>
-            <img src={Logo}/>
-          </div>
-          <div className='main'>
             <div className='section-left'>
               <div className='bg-card'>
                 <h1>¡Lista de regalos!</h1>
-                <Input />
-                <div className='cnt-list-gifts'>
-                  <Gift />
-                  <Gift />
-                  <Gift />
-                  <Gift />
+                <div className='cnt-input'> 
+                  <Input 
+                    onNewCategory={onAddCategory}
+                  // setRegalos={ setRegalos } 
+                  />  
                 </div>
               </div>
-            </div>
-            <div className='section-right'>
-              <div className="santa-img">
-                <img  src={Santa} />
-              </div>
+              <div className='cnt-list-gifts'>
+                  {
+                    regalos.map( regalo => (
+                      <GiftGrid 
+                        key={regalo} 
+                        regalo={regalo} />
+                    ))
+                  }
+                </div>
             </div>
           </div>
-      </div>
     </>
   )
 }
 
-export default App
+export default App;
